@@ -5,3 +5,6 @@ foodParagraph.innerHTML = `My favorite foods are: ${favoriteFoods[0]}, ${favorit
 document.getElementById("output").innerHTML += foodParagraph.innerHTML;
 
 console.log("It worked!")
+
+const today = new Date();
+document.getElementById("today").innerHTML += today;
