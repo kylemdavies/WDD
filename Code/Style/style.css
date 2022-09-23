@@ -1,0 +1,22 @@
+body {
+    background-color: steelblue;
+}
+h1 {
+    color:rgb(52, 56, 60);
+}
+.smaller {
+    font-size: 20px;
+}
+p {
+    color:black;
+}
+.white {
+    color:whitesmoke;
+}
+.main {
+    color:black;
+    border-color: black;
+    background-color:lightcoral;
+    border-style: groove;
+    border-width: 1pt;
+}
