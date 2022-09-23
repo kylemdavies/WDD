@@ -6,5 +6,5 @@ document.getElementById("output").innerHTML += foodParagraph.innerHTML;
 
 console.log("It worked!")
 
-const today = new Date();
+const today = new Date().toDateString();
 document.getElementById("today").innerHTML += today;
