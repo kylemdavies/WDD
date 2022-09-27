@@ -20,3 +20,12 @@ p {
     border-style: groove;
     border-width: 1pt;
 }
+
+nav {
+    width: 40%;
+    padding-left: .5rem;
+    margin-left: .5rem;
+    float: left;
+    font-style: italic;
+    color: #29627e;
+}
