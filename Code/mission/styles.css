@@ -1,0 +1,45 @@
+body {
+    text-align: center;
+}
+
+output {
+    padding-bottom: 1em;
+}
+
+h1{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 1.5px
+
+}
+
+h2 {
+    color: #006EB6;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    
+}
+
+main{
+    width: 600px;
+    margin:auto;
+}
+
+p {
+    text-align: left;
+    width: 600px;
+    font-size: 20px;
+}
+
+ul {
+    text-align: left;
+    width: 600px;
+    font-size: 20px;
+    padding-bottom: 1em;
+}
+
+li {
+    text-align: left;
+    width: 600px;
+    font-size: 20px;
+}
