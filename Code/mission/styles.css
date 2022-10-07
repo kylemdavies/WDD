@@ -6,6 +6,11 @@ output {
     padding-bottom: 1em;
 }
 
+.dark {
+    background-color: #333;
+    color: white;
+}
+
 h1{
     text-transform: uppercase;
     letter-spacing: 5px;
