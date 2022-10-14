@@ -1,0 +1,42 @@
+/* Color 1 Hex Dark Color: 131B23 */
+/* Color 2 Hex Blue: 2274A5 */
+/* Color 3 Hex Gold: FFD61F */
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(7 , 1fr);
+    width: auto;
+    height: auto;
+    border: 1px solid;
+    column-gap: 5px;
+}
+.header {
+    grid-column: 1/8;
+}
+.title {
+    width:auto;
+    text-align: center;
+    grid-column: 1/8;
+    grid-row:1/2;
+    color: #2274A5;
+}
+.bar {
+    grid-column: 2/7;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+.sort {
+    grid-column: 1/2;
+    grid-row: 2/auto;
+}
+
+.library {
+    grid-column: 2/6;
+    grid-row:2/auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.books {
+    grid-column:1/2;
+}
