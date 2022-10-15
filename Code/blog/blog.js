@@ -25,3 +25,11 @@ const articles = [
       stars: "⭐⭐⭐⭐"
     }
   ];
+function main() {
+  const getImageDiv = document.querySelector(".images");
+  for (let index = 0; index < articles.length; index++) {
+    const element = articles[imgSrc];
+    getImageDiv.innerHTML += `<img src=${element}>`;
+  }
+}
+main();
