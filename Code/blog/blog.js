@@ -26,10 +26,16 @@ const articles = [
     }
   ];
 function main() {
+  // the purpose of this is to display the individual parts of the article
+  // this is just the standard view though no filters on it yet
   const getImageDiv = document.querySelector(".images");
+  // grabs the div needed for images.
   for (let index = 0; index < articles.length; index++) {
+    // for each key in the dictionary
     const element = articles[imgSrc];
+    //take the imgSrc key
     getImageDiv.innerHTML += `<img src=${element}>`;
+    //put the imgSrc in the src element
   }
 }
 main();
