@@ -9,7 +9,7 @@ const articles = [
       imgAlt: "Book cover for Septimus Heap 1",
       ages: "10-14",
       genre: "Fantasy",
-      stars: "****"
+      stars: "⭐⭐⭐⭐"
     },
     {
       id: 2,
@@ -23,19 +23,39 @@ const articles = [
       ages: "12-16",
       genre: "Fantasy",
       stars: "⭐⭐⭐⭐"
+    },
+    {
+      id: 3,
+      title: "Belgariad Book One: Pawn of Prophecy",
+      date: "Feb 12, 2022",
+      description:
+      "A fierce dispute among the Gods and the theft of a powerful Orb leaves the World divided into five kingdoms. Young Garion, with his 'Aunt Pol' and an elderly man calling himself Wolf --a father and daughter granted near-immortality by one of the Gods -- set out on a complex mission.",
+      imgSrc:
+      "https://images-na.ssl-images-amazon.com/images/I/41ZxXA+nInL.jpg",
+      imgAlt: "Book cover for Pawn of Prophecy",
+      ages: "12-16",
+      genre: "Fantasy",
+      stars: "⭐⭐⭐⭐⭐"
     }
   ];
-// function main() {
-//   // the purpose of this is to display the individual parts of the article
-//   // this is just the standard view though no filters on it yet
-//   const getImageDiv = document.querySelector(".images");
-//   // grabs the div needed for images.
-//   for (let index = 0; index < articles.length; index++) {
-//     // for each key in the dictionary
-//     const element = articles[imgSrc];
-//     //take the imgSrc key
-//     getImageDiv.innerHTML += `<img src=${element}>`;
-//     //put the imgSrc in the src element
-//   }
-// }
-// main();
+
+function articleTemplate(article) {
+  return `<div class="article">
+  <img class="images" src="${article.imgSrc}">
+  <div class="info">
+      <h2 class="title">${article.title}</h2>
+      <h3 class="date">${article.date}</h3>
+      <p class="orders">Ages: ${article.ages}<br>
+      Genre: ${article.genre}<br>
+      Rating: ${article.stars}
+      </p>
+      <p class="description">${article.description}</p>
+  </div>
+</div>`
+}
+
+function renderArticles() {
+  const htmlarticles = articles.map(articleTemplate);
+  document.querySelector("section").insertAdjacentHTML("afterbegin", htmlarticles.join(''));
+}
+renderArticles();
