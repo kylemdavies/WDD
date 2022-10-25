@@ -24,6 +24,19 @@
         <nav class="sort">
             <form id="filters" method="get">
                 <fieldset>
+                    <legend>Login</legend>
+                    <p>
+                        <label for="username">Username:</label>
+                        <input id="username" type="text" required>
+                    </p>
+                    <p>
+                        <label for="password">Password:</label>
+                        <input id="password" type="password" required>
+                    </p>
+                    <input id="userid" type="hidden" value="1234">
+                    <button type="submit">Submit</button>
+                </fieldset>
+                <fieldset>
                     <legend>Filters</legend>
                     <label for="sort">Sort:</label>
                     <!-- Sort -->
