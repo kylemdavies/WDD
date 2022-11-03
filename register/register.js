@@ -9,7 +9,7 @@ function addParticipant(){
     console.log(numOfParticipants);
 };
 
-participantTemplate(participant){
+function participantTemplate(participant){
     return `<legend>Participant Information</legend>
           <section class="participant${participant}">
             <p>Participant ${participant}</p>
