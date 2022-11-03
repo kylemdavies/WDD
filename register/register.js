@@ -4,7 +4,7 @@ document.querySelector("#add").addEventListener("click", addParticipant);
 
 function addParticipant(){
     numOfParticipants += 1;
-    const htmlParticipant = numOfParticipants.map(participantTemplate);
+    const htmlParticipant = participantTemplate(numOfParticipants);
     document.querySelector(".participants").insertAdjacentHTML("afterbegin", htmlParticipant.join(''));
     console.log(numOfParticipants);
 };
