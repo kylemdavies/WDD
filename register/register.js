@@ -10,7 +10,7 @@ function addParticipant(){
 };
 
 function participantTemplate(participant){
-    return `<legend>Participant Information</legend>
+    return `<br><legend>Participant Information</legend>
           <section class="participant${participant}">
             <p>Participant ${participant}</p>
             <div class="item">
@@ -51,4 +51,4 @@ function participantTemplate(participant){
           <button type="button" id="add">Add Participant</button>`
 }
 
-//Commit dangit I SAID COMMIT!
+//Commit dangit I SAID COMMIT! Thanks :)
