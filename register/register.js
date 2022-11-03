@@ -51,4 +51,4 @@ function participantTemplate(participant){
           <button type="button" id="add">Add Participant</button>`
 }
 
-//Commit dangit
+//Commit dangit I SAID COMMIT!
