@@ -162,5 +162,10 @@
   
 .participants {
     display: grid;
-    grid-column-template: 1fr 1fr;
+    grid-template-columns: .5fr .5fr;
+    gap:1em;
+}
+
+#add {
+  grid-column: 1/span 2;
 }

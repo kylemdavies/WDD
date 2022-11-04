@@ -1,4 +1,5 @@
 let numOfParticipants = 1
+let feeTotal = 0
 
 document.querySelector("#add").addEventListener("click", addParticipant);
 
@@ -10,8 +11,7 @@ function addParticipant(){
 };
 
 function participantTemplate(participant){
-    return `<br><legend>Participant Information</legend>
-          <section class="participant${participant}">
+    return `<section class="participant${participant}">
             <p>Participant ${participant}</p>
             <div class="item">
               <label for="fname"> First Name<span>*</span></label>
@@ -47,8 +47,18 @@ function participantTemplate(participant){
                 <option value="12">12th</option>
               </select>
             </div>
-          </section>
-          <button type="button" id="add">Add Participant</button>`
+          </section>`
 }
 
-//Commit dangit I SAID COMMIT! Thanks :)
+document.querySelector("#submitButton").addEventListener("click", submitForm);
+
+function submitForm(event) {
+    event.preventDefault();
+    totalFees();
+}
+
+function totalFees(){
+    let feeElements = document.querySelectorAll("[id^=fee]");
+    feeElements = [...feeElements]
+    sum = feeElements.reduce(function(total, item){return total + item.value})
+}
