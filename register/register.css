@@ -169,3 +169,5 @@
 #add {
   grid-column: 1/span 2;
 }
+
+.hide {display: none;}
