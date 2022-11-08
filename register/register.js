@@ -2,7 +2,8 @@ let numOfParticipants = 1
 let feeTotal = 0
 let sum = 0
 let aName = ""
-// element = document.querySelector(".testbox")
+let element = document.querySelector(".form")
+let summary = document.querySelector("#summary")
 
 document.querySelector("#add").addEventListener("click", addParticipant);
 
@@ -58,14 +59,14 @@ document.querySelector("#submitButton").addEventListener("click", submitForm);
 function submitForm(event) {
     event.preventDefault();
     sum = totalFees();
-    // element.classList.add("hide")
+    element.classList.add("hide")
     aName = document.querySelector('#adult_name').value
-    alert('Thank you ' + aName + ' for registering. You have registered ' + numOfParticipants + ' participants and owe $'+ sum +' in Fees.')
+    summary.innerHTML = 'Thank you ' + aName + ' for registering. You have registered ' + numOfParticipants + ' participants and owe $'+ sum +' in Fees.';
 }
 
 function totalFees(){
     let feeElements = document.querySelectorAll("[id^=fee]");
     feeElements = [...feeElements];
-    feeTotal = feeElements.reduce(function(total, item){return total + parseFloat(item.value)});
+    feeTotal = feeElements.reduce(function(total, item){return total + parseFloat(item.value)}, 0);
     return feeTotal
 }
