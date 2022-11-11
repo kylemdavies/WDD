@@ -1,0 +1,17 @@
+h1, h2, h3, h4, h5 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+p {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.button {
+    padding: 0.5em;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color:#73628a var(--secondary-color);
+    color: white;
+    border: 0;
+}
+

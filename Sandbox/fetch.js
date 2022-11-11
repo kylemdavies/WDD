@@ -3,6 +3,8 @@ const Pokemon = {
     ditto : "/ditto"
 }
 
+let results = null;
+
 let output = document.querySelector("#output")
 
 async function getPokemon(url, callback){
@@ -10,7 +12,7 @@ async function getPokemon(url, callback){
     if(response.ok) {
     const data = await response.json();
     // console.log(data);
-    callback(data)
+    callback(data);
     }
 }
 
@@ -26,8 +28,13 @@ function doStuff(data) {
 }
 
 function doStuffList(data){
-    
+    const pokeListElement = document.querySelector("#output");
+    const pokeList = data.results;
+    pokeList.forEach((currentItm) => {
+        const html = `<li data-url="${currentItm.url}">${currentItm.name}</li>`;
+        pokeListElement.insertAdjacentHTML("beforeend", html);
+    })
 }
 
-getPokemon(baseURL + Pokemon.ditto, doStuff);
-getPokemon(baseURL + "?limit=100", doStuffList)
+getPokemon(baseURL + Pokemon.ditto, pokemonTemplate)
+getPokemon(baseURL + "?limit=800", doStuffList)
