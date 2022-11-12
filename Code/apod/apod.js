@@ -5,7 +5,8 @@ async function getApod(url) {
     console.log(response);
     if(response.ok){
     const data = response.json();
-    photoTemplate(data);
+    article = document.querySelector(".article")
+    article.innerHTML = photoTemplate(data);
     }
 }
 
