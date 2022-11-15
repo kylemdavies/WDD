@@ -13,6 +13,10 @@ p {
     font-family: 'Courier New', Courier, monospace;
 }
 
+.main {
+    max-width: 960px;
+}
+
 .button {
     padding: 0.5em;
     font-size: 1.5rem;
@@ -38,11 +42,13 @@ p {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
+    border-bottom: solid;
+    border-color: #313d5a;
 }
 
 img {
     grid-column: 1/2;
-    width: 500px;
+    max-width: 500px;
 }
 
 .description {
