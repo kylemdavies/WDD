@@ -22,3 +22,30 @@ p {
     border: 0;
 }
 
+.error {
+    margin: 1em;
+    background-color: var(--fire-opal);
+    padding: 0.5em;
+    color: white;
+}
+
+.hide {
+    display: none;
+}
+
+.photo {
+    margin-top: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+img {
+    grid-column: 1/2;
+    width: 500px;
+}
+
+.description {
+    grid-column: 2/3;
+    width: fit-content;
+}
