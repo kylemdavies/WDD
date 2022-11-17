@@ -33,6 +33,11 @@ p {
     color: white;
 }
 
+input {
+    font-size: 1.5rem;
+    padding: 0.5em;
+}
+
 .hide {
     display: none;
 }
