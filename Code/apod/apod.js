@@ -5,9 +5,12 @@ async function getApod(url) {
     article = document.querySelector(".article")
     let response = await fetch(url);
     console.log(response);
+    const data = await response.json();
     if(response.ok){
-        const data = await response.json();
         article.innerHTML = photoTemplate(data);
+        hideError()
+    } else {
+        showError(data.msg)
     }
 }
 function photoTemplate(info) {
@@ -27,4 +30,15 @@ document.querySelector(".button").addEventListener("click", getApodByDate)
 async function getApodByDate(ev) {
     let apodImage = apodUrl + `&date=${date.value}`;
     await getApod(apodImage);
+}
+
+function showError(msg) {
+    error = document.querySelector(".error");
+    error.innerHTML = msg
+    error.classList.remove("hide");
+}
+
+function hideError() {
+    error = document.querySelector(".error");
+    error.classList.add("hide");
 }

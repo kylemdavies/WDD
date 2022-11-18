@@ -11,6 +11,11 @@
             --quote-color: blue;
             --quote-width: 66ch;
         }
+        body {
+            display: grid;
+            grid-template-columns: 50px 1fr;
+            gap: 1em;
+        }
         .quote {
             font-size: 1.2em;
             font-family: 'Courier New', Courier, monospace;
@@ -25,9 +30,25 @@
             text-align: right;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
+        #button {
+            margin-top: 10px;
+            background-color: cornflowerblue;
+            color: white;
+            max-height: 50px;
+            cursor: pointer;
+        }
+        #button:hover {
+            margin-top: 10px;
+            background-color: rgb(85, 127, 205);
+            color: rgb(183, 183, 183);
+            max-height: 50px;
+            cursor: pointer;
+            box-shadow: 0 0 0 2px;
+        }
     </style>
 </head>
 <body>
+    <button id="button">New Quote</button>
     <section id="quoteContainer"></section>
 </body>
 </html>
