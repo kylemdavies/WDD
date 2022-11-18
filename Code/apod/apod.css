@@ -45,7 +45,7 @@ input {
 .photo {
     margin-top: 1em;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 10px;
     border-bottom: solid;
     border-color: #313d5a;
@@ -53,7 +53,7 @@ input {
 
 img {
     grid-column: 1/2;
-    max-width: 500px;
+    max-width: fill;
 }
 
 .description {
